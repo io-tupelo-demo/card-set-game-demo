@@ -1,14 +1,12 @@
 # card-set-game-demo
 
-A demo using Plumatic Schema in Clojure code. 
+## A demo using Plumatic Schema in Clojure code.
 
-## Implements the card "Set" game from PurelyFunctional.tv Issue 396 - September 21, 2020 
+Implements the card "Set" game from *PurelyFunctional.tv Issue 396 - September 21, 2020*
 
- - link:https://purelyfunctional.tv/issues/purelyfunctional-tv-newsletter-396-how-types-help-you-reason/[Read Online]
+ - link:https://purelyfunctional.tv/issues/purelyfunctional-tv-newsletter-396-how-types-help-you-reason/[Original Blog Posting]
 
-----------------------------
-
-Set Game
+## Set Game
 
 I used to play a game called Set. In it, you’d place 12 cards down on the table. Then the players would try to find “sets”. If you found a set, you’d race to hit the cards with your hand to claim it. It was tons of fun and just mathy enough to appeal to someone like me.
 
