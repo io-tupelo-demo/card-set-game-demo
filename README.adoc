@@ -1,0 +1,53 @@
+# card-set-game-demo
+
+A demo using Plumatic Schema in Clojure code. 
+
+## Implements the card "Set" game from PurelyFunctional.tv Issue 396 - September 21, 2020 
+
+ - link:https://purelyfunctional.tv/issues/purelyfunctional-tv-newsletter-396-how-types-help-you-reason/[Read Online]
+
+----------------------------
+
+Set Game
+
+I used to play a game called Set. In it, you’d place 12 cards down on the table. Then the players would try to find “sets”. If you found a set, you’d race to hit the cards with your hand to claim it. It was tons of fun and just mathy enough to appeal to someone like me.
+
+In this task, you are going to take a function that judges whether three cards constitute a valid “set”.
+
+Each card has four properties:
+
+Color (red, purple, green)
+Number (1, 2, 3)
+Shading (empty, lined, full)
+Shape (squiggle, oval, diamond)
+So one card might have 3 purple full diamonds. Search for the game and look at pictures if you want some examples.
+
+We’ll represent each card as a map, like this:
+
+{:color :purple
+:number 3
+:shading :full
+:shape :diamond}
+Three cards form a set if all of the properties are total matches or total mismatches. A property is a total match if all of the values are the same, for instance three red cards. They are a total mismatch if all the values are different, for instance a diamond, an oval, and a squiggle. If any of the properties don’t match or mismatch, it’s not a set.
+
+Here’s an example of a set:
+
+[{:color :purple :number 3 :shape :diamond :shading :full}
+{:color :red    :number 3 :shape :diamond :shading :lines}
+{:color :green  :number 3 :shape :diamond :shading :empty}]
+Colors are a total mismatch, numbers are a total match, shape is a total match, shading is a total mismatch.
+
+Here’s an example of a non-set:
+
+[{:color :purple :number 3 :shape :diamond :shading :full}
+{:color :red    :number 3 :shape :diamond :shading :lines}
+{:color :purple :number 3 :shape :diamond :shading :empty}]
+Above, the colors are two purples and a red. Not a total match and not a total mismatch.
+
+Write a function that takes an array of cards and says whether they are a set.
+
+(set? [{..} {..} {..}]) ;=> true/false
+
+Thanks to link:https://edabit.com/challenge/278bzxEFeTKNiKXfM[this site] for the challenge idea where it is considered Very Hard level in JavaScript.
+
+
